@@ -2,20 +2,21 @@ class Rectangle:
     def __init__(self, a, b):
         self.a = a
         self.b = b
-    def p(self):
-        return 2*(self.a + self.b)
-    def s(self):
+
+    def calc_perimeter(self):
+        # Бажано, щоб назва функції відповідала на питання, що робить ця функція.
+        return 2 * (self.a + self.b)
+
+    def calc_surface(self):
         return self.a * self.b
+
+
 class Square(Rectangle):
-    def sq(self):
-        if self.a == self.b:
-            self.sq = True
-            return self.sq
-        else:
-            self.sq = False
-            return self.sq
+    def square_check(self):
+        # Невеличкий lifehack, якщо в тебе функція перевіряє True або False, можеш просто зробити так
+        return self.a == self.b
 
-
+# Перед выдправкою коду на перевірку, краще видаляй закоментовані частинки коду нижче. Буде виглядати "професійніше" ) 
 
 #x = Square(2,10)
 #y = Square(10,10)
